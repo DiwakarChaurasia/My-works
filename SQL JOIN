@@ -1,0 +1,33 @@
+Consider this scenario which will help you to clarify the concept of INNER JOIN & LEFT JOIN: 
+
+You have been provided a data for a feature sports article on Michael Jordan’s basketball career. 
+The writer wants to include a funny twist and asks you to find out if Michael Jordan played better at schools with animal mascots.
+
+To analyze his early career, you start with the years he played basketball in college. 
+You need to examine National Collegiate Athletic Association (NCAA) college basketball stats from 1984.
+
+You’ll need a list of all NCAA Division I colleges and universities; their mascots, if applicable; and their number of wins and losses. 
+"You can find this information in the public dataset ncaa_basketball on BigQuery."
+
+Next, you will write a query. 
+Your query should join the season statistics from one table with the mascot information from another. 
+You need to use a LEFT JOIN here, instead of an INNER JOIN because not all teams have mascots. If you use an INNER JOIN, you would exclude teams with no mascot.
+
+SELECT
+ seasons.market AS university,
+ seasons.name AS team_name,
+ seasons.wins,
+ seasons.losses,
+ seasons.ties,
+ mascots.mascot AS team_mascot
+FROM
+ `bigquery-public-data.ncaa_basketball.mbb_historical_teams_seasons` AS seasons
+LEFT JOIN
+ `bigquery-public-data.ncaa_basketball.mascots` AS mascots
+ON
+ seasons.team_id = mascots.id
+WHERE
+ seasons.season = 1984
+ AND seasons.division = 1
+ORDER BY
+ seasons.market
