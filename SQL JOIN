@@ -1,3 +1,5 @@
+Mastering JOIN statements is one of the most important parts of SQL, as combining data from multiple database tables is a core skill for data analysts. And when you apply for jobs,
+remember that JOIN statements are a common topic in data analyst interviews! The more JOIN statements you write, the more prepared you will be for a data analyst role.
 Consider this scenario which will help you to clarify the concept of INNER JOIN & LEFT JOIN: 
 
 You have been provided a data for a feature sports article on Michael Jordan’s basketball career. 
