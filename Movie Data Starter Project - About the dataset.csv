@@ -1,0 +1,43 @@
+"Pivot tables let you view data in multiple ways to find insights and trends. Further, pivot tables help with cleaning and organizing your data including sorting and grouping data."
+"But pivot tables can also help with calculations. For example, they're great for quickly calculating sums and averages."
+
+Let's discuss it with this dataset.
+"Here, your manager ask you to find some trends to help them think through new movie ideas using revenue calculations."
+
+"So let's get into it. First, we need to find out how much revenue was generated each year."
+A pivot table is a good way to organize this. So we'll build a pivot table to show this.
+"In our pivot table, we can also find the average revenue per movie."
+
+We'll start by finding the revenue generated each year. This gives us the release date for each movie in column B and the box office revenue in column N.
+
+"Now we can build our pivot table, starting with the rows. We'll sort the rows by release date to find out the revenue for each year. You might notice this creates a row for every date on which one or more movies in this dataset was released."
+"Since we only need the years, we'll right click in one of the cells in the release date column to create a pivot date group and group by year."
+
+"Next, we want to work with the values. Well, at the box office revenue data here. This populates the columns next to the release dates with the total box office revenue and each year."
+These calculations are automatic because the pivot table is already set to summarize the data using the sum function.
+
+"This data shows that 2014 have the highest revenue, while 2016 have the lowest. This might be useful information, but finding the average revenue per movie would most likely be more useful since there was a different number of movies released each year."
+"The average function gives us the average revenue per year for the movies in the dataset. We can see that the average revenue in 2015 was much lower than the other years. Since this data stands out so much, let's keep exploring to find out why."
+
+"So let's try to figure this out. First, we'll know how many movies from each year were included in the dataset, we'll add a new value and use the count function this time."
+
+This shows us that there are more movies in the data set from 2015 than from any other year. But 2015 still has the second lowest total box office revenue.
+"This could mean a few things. It's likely that a lot of the movies from 2015 just didn't earn much revenue compared to the other years, which would bring down the overall average revenue."
+Even if the total revenue remained on par with the other years. We'll explore just this one possibility here.
+
+
+For now let's copy and paste our pivot table so we can test our hypothesis.
+We also discovered that the average revenue for 2015 was lower than other years even though more movies were released that year.
+We hypothesized that this was because more movies that earn less than $10 million in revenue were released in 2015.
+
+Let's get started. You all remember that the filter option lets us view only the values we need.
+We'll select a cell in our copied pivot table and add a filter to the box office revenue column. The filter will then be applied to the entire table.
+"But in our case, we want to filter by condition so we can figure out how many movies in each year earn less than $10 million."
+The condition we'll use in our filter is less than and our value will be $10 million which is why we renamed these columns earlier.
+
+"Before we go further, let's use a calculated field to verify our average because it was copied from another pivot table before we filtered it. That way we can check that it's correct. "
+(A calculated field is a new field within a pivot table that carries out certain calculations based on the values of other fields.)
+But it's still difficult to tell how much of an impact these lower earning movies had on the average revenue. Let's run a quick formula to find the percentage of movies for each year that earned less than $10 million.
+This will make it easier to compare from year to year.  Divide the number of movies in the copy table by the number of movies in the original table.
+"Finally, we'll format these numbers as percentages. Now our analysis shows that 16 percent of the movies released in 2015 earned less than $10 million of revenue. The other years are all close to 10 percent.                                                                                                                      "
+This is one possible explanation for why the average revenue is comparatively low in 2015.
